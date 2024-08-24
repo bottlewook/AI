@@ -37,7 +37,7 @@ const move = (
   return result;
 };
 
-const App: React.FC = () => {
+function App() {
   const [state, setState] = useState<State>({
     droppable1: Array.from({ length: 5 }, (v, k) => ({
       id: `item-${k}`,

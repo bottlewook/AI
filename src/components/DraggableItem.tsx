@@ -12,13 +12,13 @@ interface DraggableItemProps {
   onItemSelect: (id: string) => void;
 }
 
-const DraggableItem: React.FC<DraggableItemProps> = ({
+function DraggableItem({
   item,
   index,
   isSelected,
   isInvalid,
   onItemSelect,
-}) => {
+}: DraggableItemProps) {
   return (
     <Draggable key={item.id} draggableId={item.id} index={index}>
       {(provided, snapshot) => (
@@ -33,12 +33,12 @@ const DraggableItem: React.FC<DraggableItemProps> = ({
             }
           }}
           className={`p-4 my-2 rounded-lg shadow-md cursor-pointer ${isInvalid
-              ? "bg-red-500 text-white"
-              : isSelected
-                ? "bg-blue-500 text-white"
-                : snapshot.isDragging
-                  ? "bg-green-500 text-white"
-                  : "bg-white text-gray-900 border border-gray-300"
+            ? "bg-red-500 text-white"
+            : isSelected
+              ? "bg-blue-500 text-white"
+              : snapshot.isDragging
+                ? "bg-green-500 text-white"
+                : "bg-white text-gray-900 border border-gray-300"
             }`}
         >
           {item.content}

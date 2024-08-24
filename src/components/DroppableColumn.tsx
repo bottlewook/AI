@@ -10,13 +10,13 @@ interface DroppableColumnProps {
   onItemSelect: (id: string) => void;
 }
 
-const DroppableColumn: React.FC<DroppableColumnProps> = ({
+function DroppableColumn({
   droppableId,
   items,
   invalidDragId,
   selectedItems,
   onItemSelect,
-}) => {
+}: DroppableColumnProps) {
   const columnTitle = droppableId.replace("droppable", "Column ");
   return (
     <div className="flex flex-col items-center w-72">
