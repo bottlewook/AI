@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+
+# Production
+build/
+dist/
+
+# Misc
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+
+# Babel and ESLint cache
+.cache/
+.parcel-cache/
+eslintcache
+
+# Local env files
+.env
